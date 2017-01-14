@@ -1,0 +1,545 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A29C83F61E2AB46800E93237 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A29C83F51E2AB46800E93237 /* main.m */; };
+		A29C83F91E2AB46800E93237 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A29C83F81E2AB46800E93237 /* AppDelegate.m */; };
+		A29C83FC1E2AB46800E93237 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A29C83FB1E2AB46800E93237 /* ViewController.m */; };
+		A29C83FF1E2AB46800E93237 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A29C83FD1E2AB46800E93237 /* Main.storyboard */; };
+		A29C84021E2AB46800E93237 /* Teender.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A29C84001E2AB46800E93237 /* Teender.xcdatamodeld */; };
+		A29C84041E2AB46800E93237 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A29C84031E2AB46800E93237 /* Assets.xcassets */; };
+		A29C84071E2AB46800E93237 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A29C84051E2AB46800E93237 /* LaunchScreen.storyboard */; };
+		A29C84121E2AB46900E93237 /* TeenderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A29C84111E2AB46900E93237 /* TeenderTests.m */; };
+		A29C841D1E2AB46900E93237 /* TeenderUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A29C841C1E2AB46900E93237 /* TeenderUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A29C840E1E2AB46900E93237 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A29C83E91E2AB46800E93237 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A29C83F01E2AB46800E93237;
+			remoteInfo = Teender;
+		};
+		A29C84191E2AB46900E93237 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A29C83E91E2AB46800E93237 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A29C83F01E2AB46800E93237;
+			remoteInfo = Teender;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A29C83F11E2AB46800E93237 /* Teender.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Teender.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A29C83F51E2AB46800E93237 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A29C83F71E2AB46800E93237 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A29C83F81E2AB46800E93237 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A29C83FA1E2AB46800E93237 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A29C83FB1E2AB46800E93237 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A29C83FE1E2AB46800E93237 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A29C84011E2AB46800E93237 /* Teender.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Teender.xcdatamodel; sourceTree = "<group>"; };
+		A29C84031E2AB46800E93237 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A29C84061E2AB46800E93237 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A29C84081E2AB46800E93237 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A29C840D1E2AB46900E93237 /* TeenderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeenderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A29C84111E2AB46900E93237 /* TeenderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TeenderTests.m; sourceTree = "<group>"; };
+		A29C84131E2AB46900E93237 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A29C84181E2AB46900E93237 /* TeenderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeenderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A29C841C1E2AB46900E93237 /* TeenderUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TeenderUITests.m; sourceTree = "<group>"; };
+		A29C841E1E2AB46900E93237 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A29C83EE1E2AB46800E93237 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A29C840A1E2AB46900E93237 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A29C84151E2AB46900E93237 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A29C83E81E2AB46800E93237 = {
+			isa = PBXGroup;
+			children = (
+				A29C83F31E2AB46800E93237 /* Teender */,
+				A29C84101E2AB46900E93237 /* TeenderTests */,
+				A29C841B1E2AB46900E93237 /* TeenderUITests */,
+				A29C83F21E2AB46800E93237 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A29C83F21E2AB46800E93237 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A29C83F11E2AB46800E93237 /* Teender.app */,
+				A29C840D1E2AB46900E93237 /* TeenderTests.xctest */,
+				A29C84181E2AB46900E93237 /* TeenderUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A29C83F31E2AB46800E93237 /* Teender */ = {
+			isa = PBXGroup;
+			children = (
+				A29C83F71E2AB46800E93237 /* AppDelegate.h */,
+				A29C83F81E2AB46800E93237 /* AppDelegate.m */,
+				A29C83FA1E2AB46800E93237 /* ViewController.h */,
+				A29C83FB1E2AB46800E93237 /* ViewController.m */,
+				A29C83FD1E2AB46800E93237 /* Main.storyboard */,
+				A29C84031E2AB46800E93237 /* Assets.xcassets */,
+				A29C84051E2AB46800E93237 /* LaunchScreen.storyboard */,
+				A29C84081E2AB46800E93237 /* Info.plist */,
+				A29C84001E2AB46800E93237 /* Teender.xcdatamodeld */,
+				A29C83F41E2AB46800E93237 /* Supporting Files */,
+			);
+			path = Teender;
+			sourceTree = "<group>";
+		};
+		A29C83F41E2AB46800E93237 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A29C83F51E2AB46800E93237 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A29C84101E2AB46900E93237 /* TeenderTests */ = {
+			isa = PBXGroup;
+			children = (
+				A29C84111E2AB46900E93237 /* TeenderTests.m */,
+				A29C84131E2AB46900E93237 /* Info.plist */,
+			);
+			path = TeenderTests;
+			sourceTree = "<group>";
+		};
+		A29C841B1E2AB46900E93237 /* TeenderUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A29C841C1E2AB46900E93237 /* TeenderUITests.m */,
+				A29C841E1E2AB46900E93237 /* Info.plist */,
+			);
+			path = TeenderUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A29C83F01E2AB46800E93237 /* Teender */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A29C84211E2AB46900E93237 /* Build configuration list for PBXNativeTarget "Teender" */;
+			buildPhases = (
+				A29C83ED1E2AB46800E93237 /* Sources */,
+				A29C83EE1E2AB46800E93237 /* Frameworks */,
+				A29C83EF1E2AB46800E93237 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Teender;
+			productName = Teender;
+			productReference = A29C83F11E2AB46800E93237 /* Teender.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A29C840C1E2AB46900E93237 /* TeenderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A29C84241E2AB46900E93237 /* Build configuration list for PBXNativeTarget "TeenderTests" */;
+			buildPhases = (
+				A29C84091E2AB46900E93237 /* Sources */,
+				A29C840A1E2AB46900E93237 /* Frameworks */,
+				A29C840B1E2AB46900E93237 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A29C840F1E2AB46900E93237 /* PBXTargetDependency */,
+			);
+			name = TeenderTests;
+			productName = TeenderTests;
+			productReference = A29C840D1E2AB46900E93237 /* TeenderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A29C84171E2AB46900E93237 /* TeenderUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A29C84271E2AB46900E93237 /* Build configuration list for PBXNativeTarget "TeenderUITests" */;
+			buildPhases = (
+				A29C84141E2AB46900E93237 /* Sources */,
+				A29C84151E2AB46900E93237 /* Frameworks */,
+				A29C84161E2AB46900E93237 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A29C841A1E2AB46900E93237 /* PBXTargetDependency */,
+			);
+			name = TeenderUITests;
+			productName = TeenderUITests;
+			productReference = A29C84181E2AB46900E93237 /* TeenderUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A29C83E91E2AB46800E93237 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Paran Sonthalia";
+				TargetAttributes = {
+					A29C83F01E2AB46800E93237 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					A29C840C1E2AB46900E93237 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A29C83F01E2AB46800E93237;
+					};
+					A29C84171E2AB46900E93237 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A29C83F01E2AB46800E93237;
+					};
+				};
+			};
+			buildConfigurationList = A29C83EC1E2AB46800E93237 /* Build configuration list for PBXProject "Teender" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A29C83E81E2AB46800E93237;
+			productRefGroup = A29C83F21E2AB46800E93237 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A29C83F01E2AB46800E93237 /* Teender */,
+				A29C840C1E2AB46900E93237 /* TeenderTests */,
+				A29C84171E2AB46900E93237 /* TeenderUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A29C83EF1E2AB46800E93237 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A29C84071E2AB46800E93237 /* LaunchScreen.storyboard in Resources */,
+				A29C84041E2AB46800E93237 /* Assets.xcassets in Resources */,
+				A29C83FF1E2AB46800E93237 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A29C840B1E2AB46900E93237 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A29C84161E2AB46900E93237 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A29C83ED1E2AB46800E93237 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A29C83FC1E2AB46800E93237 /* ViewController.m in Sources */,
+				A29C83F91E2AB46800E93237 /* AppDelegate.m in Sources */,
+				A29C83F61E2AB46800E93237 /* main.m in Sources */,
+				A29C84021E2AB46800E93237 /* Teender.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A29C84091E2AB46900E93237 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A29C84121E2AB46900E93237 /* TeenderTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A29C84141E2AB46900E93237 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A29C841D1E2AB46900E93237 /* TeenderUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A29C840F1E2AB46900E93237 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A29C83F01E2AB46800E93237 /* Teender */;
+			targetProxy = A29C840E1E2AB46900E93237 /* PBXContainerItemProxy */;
+		};
+		A29C841A1E2AB46900E93237 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A29C83F01E2AB46800E93237 /* Teender */;
+			targetProxy = A29C84191E2AB46900E93237 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A29C83FD1E2AB46800E93237 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A29C83FE1E2AB46800E93237 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A29C84051E2AB46800E93237 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A29C84061E2AB46800E93237 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A29C841F1E2AB46900E93237 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A29C84201E2AB46900E93237 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A29C84221E2AB46900E93237 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Teender/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Mango-Apps.Teender";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A29C84231E2AB46900E93237 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Teender/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Mango-Apps.Teender";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A29C84251E2AB46900E93237 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TeenderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Mango-Apps.TeenderTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Teender.app/Teender";
+			};
+			name = Debug;
+		};
+		A29C84261E2AB46900E93237 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TeenderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Mango-Apps.TeenderTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Teender.app/Teender";
+			};
+			name = Release;
+		};
+		A29C84281E2AB46900E93237 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TeenderUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Mango-Apps.TeenderUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Teender;
+			};
+			name = Debug;
+		};
+		A29C84291E2AB46900E93237 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TeenderUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Mango-Apps.TeenderUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Teender;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A29C83EC1E2AB46800E93237 /* Build configuration list for PBXProject "Teender" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A29C841F1E2AB46900E93237 /* Debug */,
+				A29C84201E2AB46900E93237 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A29C84211E2AB46900E93237 /* Build configuration list for PBXNativeTarget "Teender" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A29C84221E2AB46900E93237 /* Debug */,
+				A29C84231E2AB46900E93237 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A29C84241E2AB46900E93237 /* Build configuration list for PBXNativeTarget "TeenderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A29C84251E2AB46900E93237 /* Debug */,
+				A29C84261E2AB46900E93237 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A29C84271E2AB46900E93237 /* Build configuration list for PBXNativeTarget "TeenderUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A29C84281E2AB46900E93237 /* Debug */,
+				A29C84291E2AB46900E93237 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A29C84001E2AB46800E93237 /* Teender.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A29C84011E2AB46800E93237 /* Teender.xcdatamodel */,
+			);
+			currentVersion = A29C84011E2AB46800E93237 /* Teender.xcdatamodel */;
+			path = Teender.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = A29C83E91E2AB46800E93237 /* Project object */;
+}
