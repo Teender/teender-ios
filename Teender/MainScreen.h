@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+@import Firebase;
 
-@interface MainScreen : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface MainScreen : UIViewController <UITableViewDelegate, UITableViewDataSource> {
+    FIRAuthCredential *credential;
+}
     @property (weak, nonatomic) IBOutlet UILabel *label;
-    @property (strong, nonatomic) FIRDatabaseReference *ref;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) FIRDatabaseReference *rootRef;
 
 @end

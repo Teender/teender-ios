@@ -51,6 +51,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="2jx-If-zj0" id="QQB-5a-GJj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0oD-YL-cFH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -59,7 +62,7 @@
         <!--Add Crush-->
         <scene sceneID="d9g-yk-s43">
             <objects>
-                <viewController id="dRy-36-GIe" customClass="AddCrush" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddCrush" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dRy-36-GIe" customClass="AddCrush" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Bqv-nM-eWa"/>
                         <viewControllerLayoutGuide type="bottom" id="i9Q-M4-vrf"/>

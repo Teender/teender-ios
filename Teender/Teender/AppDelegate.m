@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
+@import Firebase;
 
 @import UIKit;
 //@import Firebase;
@@ -18,17 +19,6 @@
 
 @implementation AppDelegate
 
-
-- (void)loginButton:(FBSDKLoginButton *)loginButton
-didCompleteWithResult:(FBSDKLoginManagerLoginResult *)result
-              error:(NSError *)error {
-    if (error == nil) {
-        // ...
-    } else {
-        NSLog(error.localizedDescription);
-    }
-}
-
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     [FBSDKAppEvents activateApp];
 }
@@ -36,7 +26,7 @@ didCompleteWithResult:(FBSDKLoginManagerLoginResult *)result
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [[FBSDKApplicationDelegate sharedInstance] application:application
                              didFinishLaunchingWithOptions:launchOptions];
-//    [FIRApp configure];
+    [FIRApp configure];
     return YES;
 }
     

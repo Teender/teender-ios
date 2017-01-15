@@ -9,6 +9,7 @@
 #import "MainScreen.h"
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
+
 @import Firebase;
 
 @interface MainScreen ()
@@ -22,19 +23,56 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    tableData = [NSArray arrayWithObjects:@"Egg Benedict", @"Mushroom Risotto", @"Full Breakfast", @"Hamburger", @"Ham and Egg Sandwich", @"Creme Brelee", @"White Chocolate Donut", @"Starbucks Coffee", @"Vegetable Curry", @"Instant Noodle with Egg", @"Noodle with BBQ Pork", @"Japanese Noodle with Pork", @"Green Tea", @"Thai Shrimp Cake", @"Angry Birds Cake", @"Ham and Cheese Panini", nil];
-
-    
     // Do any additional setup after loading the view from its nib.
     if ([FBSDKAccessToken currentAccessToken]) {
         // User is logged in, do work such as go to next view controller.
         NSLog(@"logged in");
         NSString *accessToken = [FBSDKAccessToken currentAccessToken];
         NSLog(@"%@", accessToken);
+        
+        credential = [FIRFacebookAuthProvider
+                                         credentialWithAccessToken:[FBSDKAccessToken currentAccessToken]
+                                         .tokenString];
+        
     }
     
     
-    self.ref = [[FIRDatabase database] reference];
+    tableData = [NSArray arrayWithObjects:@"Egg Benedict", @"Mushroom Risotto", @"Full Breakfast", @"Hamburger", @"Ham and Egg Sandwich", @"Creme Brelee", @"White Chocolate Donut", @"Starbucks Coffee", @"Vegetable Curry", @"Instant Noodle with Egg", @"Noodle with BBQ Pork", @"Japanese Noodle with Pork", @"Green Tea", @"Thai Shrimp Cake", @"Angry Birds Cake", @"Ham and Cheese Panini", nil];
+    
+    self.tableView.dataSource = self;
+    
+    
+//    FIRDatabaseReference *rootRef= [[FIRDatabase database] reference];
+    self.rootRef = [[FIRDatabase database] reference];
+
+    
+    [[FIRAuth auth] signInWithCredential:credential
+                              completion:^(FIRUser *user, NSError *error) {
+                             if (error) {
+                                 // an error occurred while attempting login
+                             } else {
+                                 // user is logged in, check authData for data
+//                                 [_rootRef
+//                                  observeEventType:FIRDataEventTypeChildAdded
+//                                  withBlock:^(FIRDataSnapshot *snapshot) {
+//                                      
+//                                      NSLog(@"hi %@", snapshot.value[@"test"]);
+//                                  }];
+                                 
+                                 [_rootRef
+                                  observeEventType:FIRDataEventTypeValue
+                                  withBlock:^(FIRDataSnapshot *snapshot) {
+                                     // Get user value
+                                     //User *user = [[User alloc] initWithUsername:snapshot.value[@"username"]];
+                                     NSLog(@"%@", snapshot.value[@"test"]);
+                                     
+                                     // ...
+                                 } withCancelBlock:^(NSError * _Nonnull error) {
+                                     NSLog(@"%@", error.localizedDescription);
+                                 }];
+                             }
+                         }];
+    
     
 }
 

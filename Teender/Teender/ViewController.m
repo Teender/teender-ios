@@ -11,7 +11,7 @@
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import "MainScreen.h"
 #import "AppDelegate.h"
-@import Firebase
+@import Firebase;
 
 
 @interface ViewController ()
@@ -32,19 +32,7 @@
 //    NSLog(accessToken);
     
     
-    FBSDKLoginButton *loginButton = [[FBSDKLoginButton alloc] init];
     loginButton.delegate = self;
-    
-    FIRAuthCredential *credential = [FIRFacebookAuthProvider
-                                     credentialWithAccessToken:[FBSDKAccessToken currentAccessToken]
-                                     .tokenString];
-    
-    NSError *signOutError;
-    BOOL status = [[FIRAuth auth] signOut:&signOutError];
-    if (!status) {
-        NSLog(@"Error signing out: %@", signOutError);
-        return;
-    }
    
     
 /*sign out
@@ -59,6 +47,16 @@
      
     
 }
+
+- (void)loginButton:(FBSDKLoginButton *)loginButton didCompleteWithResult:(FBSDKLoginManagerLoginResult *)result
+              error:(NSError *)error {
+    if (error == nil) {
+        // ...
+    } else {
+        NSLog(error.localizedDescription);
+    }
+}
+
 
 - (void) viewDidAppear:(BOOL)animated {
 //    [[FBSDKApplicationDelegate sharedInstance] application:application didFinishLaunchingWithOptions:launchOptions];

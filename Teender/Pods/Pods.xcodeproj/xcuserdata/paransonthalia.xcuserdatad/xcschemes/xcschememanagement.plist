@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>GTMSessionFetcher.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>GoogleToolboxForMac.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Teender.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-TeenderTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-TeenderUITests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>58E7450DB13C5ECCE92D3C0DF7CF0903</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A5F01D5013A084B01A8B5F48EEDEFBAF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C194BCE36E59B5AB0814E60BA5AA1ED7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DA91FB398F959AA5C062E0CAE3E618DE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DE868725B18AE240E550C5515AE66BC4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

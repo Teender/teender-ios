@@ -19,16 +19,18 @@
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>fb937291836407350</string>
+				<string>fb819435651531573</string>
 			</array>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>FacebookAppID</key>
-	<string>937291836407350</string>
+	<string>819435651531573</string>
 	<key>FacebookDisplayName</key>
 	<string>Teender</string>
 	<key>LSApplicationQueriesSchemes</key>
@@ -54,7 +56,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-    
-    
 </dict>
 </plist>
