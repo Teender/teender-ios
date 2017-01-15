@@ -9,6 +9,8 @@
 #import "MainScreen.h"
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import "Chat.h"
+#import "AppDelegate.h"
 
 @import Firebase;
 
@@ -42,6 +44,11 @@
     
     tableData = [NSArray arrayWithObjects:@"Egg Benedict", @"Mushroom Risotto", @"Full Breakfast", @"Hamburger", @"Ham and Egg Sandwich", @"Creme Brelee", @"White Chocolate Donut", @"Starbucks Coffee", @"Vegetable Curry", @"Instant Noodle with Egg", @"Noodle with BBQ Pork", @"Japanese Noodle with Pork", @"Green Tea", @"Thai Shrimp Cake", @"Angry Birds Cake", @"Ham and Cheese Panini", nil];
     
+    
+//    for(int x = 0; x < ; x++) {
+//        
+//    }
+    
     self.tableView.dataSource = self;
     
     
@@ -67,7 +74,21 @@
                                   withBlock:^(FIRDataSnapshot *snapshot) {
                                      // Get user value
                                      //User *user = [[User alloc] initWithUsername:snapshot.value[@"username"]];
-                                     NSLog(@"%@", snapshot.value[@"test"]);
+                                     NSLog(@"%@", snapshot.value[@"users2"]);
+                                      NSDictionary *users = snapshot.value[@"users2"];
+                                      NSDictionary *objezc = [users objectForKey: firebaseid];
+                                      NSMutableArray *cha = [objezc objectForKey:@"chat"];
+                                      chats = [[NSMutableArray alloc] init];
+                                      
+                                      for(int x = 0; x < [cha count]; x++) {
+//                                        NSLog([cha objectAtIndex:x]);
+                                          [chats addObject:[cha objectAtIndex:x]];
+                                          NSLog(@"%@", [chats objectAtIndex:x]);
+                                      }
+                                      tableData = [chats copy];
+                                      [_tableView reloadData];
+                                      NSLog(@"");
+                                      
                                      
                                      // ...
                                  } withCancelBlock:^(NSError * _Nonnull error) {
@@ -80,9 +101,23 @@
     
     NSLog(@"%@", [FBSDKAccessToken currentAccessToken].tokenString);
     
-    
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    //    NSLog(cell.textLabel.text);
+    
+    AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+    
+    appDelegate.chatName = cell.textLabel.text;
+    
+    
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UIViewController *vc = [sb instantiateViewControllerWithIdentifier:@"chat"];
+    [self presentViewController:vc animated:YES completion:NULL];
+    
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -91,7 +126,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *simpleTableIdentifier = @"SimpleTableItem";
+    static NSString *simpleTableIdentifier = @"teencell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     

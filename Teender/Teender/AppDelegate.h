@@ -14,6 +14,8 @@
 @property (strong, nonatomic) UIWindow *window;
 
 @property (readonly, strong) NSPersistentContainer *persistentContainer;
+@property (nonatomic, retain) NSString *chatName;
+
 
 - (void)saveContext;
 

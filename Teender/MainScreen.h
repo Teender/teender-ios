@@ -7,12 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+
 @import Firebase;
 
 @interface MainScreen : UIViewController <UITableViewDelegate, UITableViewDataSource> {
     FIRAuthCredential *credential;
     NSString *facebookid;
     NSString *firebaseid;
+    NSMutableArray *chats;
+    
 }
     @property (weak, nonatomic) IBOutlet UILabel *label;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
