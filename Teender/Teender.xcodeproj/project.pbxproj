@@ -11,6 +11,7 @@
 		A2088B331E2AE9D700B0BECA /* AddCrush.m in Sources */ = {isa = PBXBuildFile; fileRef = A2088B321E2AE9D700B0BECA /* AddCrush.m */; };
 		A27410911E2ADDF600B92C2B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A27410901E2ADDF600B92C2B /* GoogleService-Info.plist */; };
 		A28D59741E2B3E0600472B3E /* Chat.m in Sources */ = {isa = PBXBuildFile; fileRef = A28D59731E2B3E0600472B3E /* Chat.m */; };
+		A28D59771E2B707A00472B3E /* InviteCrush.m in Sources */ = {isa = PBXBuildFile; fileRef = A28D59761E2B707A00472B3E /* InviteCrush.m */; };
 		A29C83F61E2AB46800E93237 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A29C83F51E2AB46800E93237 /* main.m */; };
 		A29C83F91E2AB46800E93237 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A29C83F81E2AB46800E93237 /* AppDelegate.m */; };
 		A29C83FC1E2AB46800E93237 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A29C83FB1E2AB46800E93237 /* ViewController.m */; };
@@ -57,6 +58,8 @@
 		A27410901E2ADDF600B92C2B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A28D59721E2B3E0600472B3E /* Chat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chat.h; sourceTree = "<group>"; };
 		A28D59731E2B3E0600472B3E /* Chat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Chat.m; sourceTree = "<group>"; };
+		A28D59751E2B707A00472B3E /* InviteCrush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InviteCrush.h; sourceTree = "<group>"; };
+		A28D59761E2B707A00472B3E /* InviteCrush.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InviteCrush.m; sourceTree = "<group>"; };
 		A29C83F11E2AB46800E93237 /* Teender.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Teender.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A29C83F51E2AB46800E93237 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A29C83F71E2AB46800E93237 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -144,6 +147,8 @@
 		A29C83E81E2AB46800E93237 = {
 			isa = PBXGroup;
 			children = (
+				A28D59751E2B707A00472B3E /* InviteCrush.h */,
+				A28D59761E2B707A00472B3E /* InviteCrush.m */,
 				A28D59721E2B3E0600472B3E /* Chat.h */,
 				A28D59731E2B3E0600472B3E /* Chat.m */,
 				A2088B311E2AE9D700B0BECA /* AddCrush.h */,
@@ -503,6 +508,7 @@
 				A2088B331E2AE9D700B0BECA /* AddCrush.m in Sources */,
 				A29C84351E2ACD7400E93237 /* MainScreen.m in Sources */,
 				A29C83F91E2AB46800E93237 /* AppDelegate.m in Sources */,
+				A28D59771E2B707A00472B3E /* InviteCrush.m in Sources */,
 				A29C83F61E2AB46800E93237 /* main.m in Sources */,
 				A29C84021E2AB46800E93237 /* Teender.xcdatamodeld in Sources */,
 				A28D59741E2B3E0600472B3E /* Chat.m in Sources */,

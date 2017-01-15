@@ -50,7 +50,7 @@
 //    }
     
     self.tableView.dataSource = self;
-    
+    self.tableView.delegate = self;
     
 //    FIRDatabaseReference *rootRef= [[FIRDatabase database] reference];
     self.rootRef = [[FIRDatabase database] reference];

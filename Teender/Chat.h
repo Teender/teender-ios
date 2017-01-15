@@ -8,12 +8,25 @@
 
 #import <UIKit/UIKit.h>
 
+@import Firebase;
+
 @interface Chat : UIViewController <UITableViewDelegate, UITableViewDataSource> {
-    
+    FIRAuthCredential *credential;
+    NSMutableArray *chatHistory;
+    int messagesCount;
+    Boolean send;
+    NSString *message;
+
+
 }
 
 -(IBAction) textFieldDoneEditing : (id) sender;
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) FIRDatabaseReference *rootRef;
+
+@property (weak, nonatomic) IBOutlet UIButton *send;
+- (IBAction)send:(id)sender;
+- (IBAction)back:(id)sender;
 
 @end
