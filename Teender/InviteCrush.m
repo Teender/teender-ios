@@ -7,7 +7,6 @@
 //
 
 #import "InviteCrush.h"
-#import <JSQMessagesViewController/JSQMessages.h>
 
 @interface InviteCrush ()
 
@@ -36,7 +35,7 @@
 */
 
 - (IBAction)send:(id)sender {
-    NSString *str = [NSString stringWithFormat: @"%@%@%@%@", @"https://teender.herokuapp.com/sendEmail?email=", _email.text, @"&school=Mountain%20View%20High%20School&message=", _message.text];
+    NSString *str = [NSString stringWithFormat: @"%@%@%@%@%@", @"https://teender.herokuapp.com/sendEmail?email=", _email.text, @"&school=Mountain%20View%20High%20School&message=", _message.text, @"&code=asdf"];
     
     
     NSString *post = [NSString stringWithFormat:@"postBody=%@",@"Raja"];
@@ -52,7 +51,7 @@
     
     NSURLConnection *theConnection = [NSURLConnection connectionWithRequest:request delegate:self];
     
-    [self dismissViewControllerAnimated:YES completion:nil];
+//    [self dismissViewControllerAnimated:YES completion:nil];
     
 
 }

@@ -29,7 +29,8 @@
 //    q={name}&
 //    type={user}
     
-    tableData = [NSArray arrayWithObjects:@"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", nil];
+    tableData = [NSArray arrayWithObjects:@"", nil];
+
     
     self.tableView.dataSource = self;
     

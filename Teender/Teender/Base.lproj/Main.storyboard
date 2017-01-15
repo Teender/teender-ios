@@ -214,7 +214,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PdU-vq-eXu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1658" y="315"/>
+            <point key="canvasLocation" x="1615" y="-887"/>
         </scene>
         <!--Invite Crush-->
         <scene sceneID="1Zu-cQ-Lwr">
@@ -288,7 +288,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iyF-HQ-d3V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2128.8000000000002" y="32.833583208395808"/>
+            <point key="canvasLocation" x="1548" y="36"/>
         </scene>
     </scenes>
 </document>

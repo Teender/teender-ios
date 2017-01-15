@@ -22,11 +22,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    startIndex = 0;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+
     
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
 
-    tableData = [NSArray arrayWithObjects:@"Egg Benedict", @"Mushroom Risotto", @"Full Breakfast", @"Hamburger", @"Ham and Egg Sandwich", @"Creme Brelee", @"White Chocolate Donut", @"Starbucks Coffee", @"Vegetable Curry", @"Instant Noodle with Egg", @"Noodle with BBQ Pork", @"Japanese Noodle with Pork", @"Green Tea", @"Thai Shrimp Cake", @"Angry Birds Cake", @"Ham and Cheese Panini", nil];
+    tableData = [NSArray arrayWithObjects:@"", nil];
     
     
     [self.textField becomeFirstResponder];
@@ -39,8 +42,12 @@
                       credentialWithAccessToken:[FBSDKAccessToken currentAccessToken]
                       .tokenString];
         
+        FIRUser *currentUser = [FIRAuth auth].currentUser;
+        firebaseid = currentUser.uid;
+        
     }
     
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
 
     
     [[FIRAuth auth] signInWithCredential:credential
@@ -57,9 +64,22 @@
                                            
                                            
                                            NSDictionary *messages = snapshot.value[@"messages"];
+                                           
+                                           [[_rootRef queryOrderedByChild:@"messages"] observeEventType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot *snapshot) {
+                                               
+                                               for ( FIRDataSnapshot *child in snapshot.children) {
+                                                   
+                                                   NSLog(@"child.key = %@",child.key);
+                                                   
+                                               }
+                                           }];
+                                           
+                                           
                                            NSMutableArray *content = [messages objectForKey: appDelegate.chatName];
                                            
                                            chatHistory = [[NSMutableArray alloc] init];
+                                           users = [[NSMutableArray alloc] init];
+
                                            messagesCount = [content count];
                                            
                                            for(int x = 0; x < [content count]; x++) {
@@ -70,8 +90,22 @@
                                                
                                                [chatHistory addObject: [asdf valueForKey: @"text"]];
                                                
+                                               
 //                                               NSLog(chatHistory[x]);
                                            }
+                                           for(int x = 0; x < [content count]; x++) {
+                                               
+                                               NSString *strFromInt = [NSString stringWithFormat:@"%d",x];
+                                               
+                                               NSDictionary *asdf = [content objectAtIndex: x];
+                                               
+                                               [users addObject: [asdf valueForKey: @"user"]];
+                                               startIndex = 0;
+                                               
+                                               //                                               NSLog(chatHistory[x]);
+                                           }
+                                           
+                                           
                                            tableData = [chatHistory copy];
                                            [_tableView reloadData];
                                            
@@ -85,6 +119,7 @@
                                       
                                   }
                               }];
+        });
     NSIndexPath* ipath = [NSIndexPath indexPathForRow: [self.tableView numberOfRowsInSection:0]-1 inSection: 0];
     [self.tableView scrollToRowAtIndexPath: ipath atScrollPosition: UITableViewScrollPositionTop animated: YES];
 
@@ -113,6 +148,13 @@
     }
     
     cell.textLabel.text = [tableData objectAtIndex:indexPath.row];
+    if(startIndex < [users count]) {
+        if([[users objectAtIndex:startIndex] isEqualToString: firebaseid]) {
+            cell.textLabel.textAlignment = NSTextAlignmentRight;
+            cell.textLabel.textColor = [UIColor blueColor];
+        }
+    }
+    startIndex++;
     return cell;
 }
 
@@ -145,7 +187,11 @@
                                            messagesCount = [content count];
                                            
                                            if(send == true) {
-                                               [[[[[_rootRef child:@"messages"] child: appDelegate.chatName] child:[NSString stringWithFormat:@"%d",messagesCount] ] child: @"text"] setValue: message];
+                                               NSString *key = [[_rootRef child:@"messages"] childByAutoId].key;
+                                               
+                                                [[[[[_rootRef child:@"messages"] child: appDelegate.chatName] child:key ] child: @"text"] setValue: message];
+                                                   
+                                                [[[[[_rootRef child:@"messages"] child: appDelegate.chatName] child:[NSString stringWithFormat:@"%d",messagesCount] ] child: @"user"] setValue: firebaseid];
                                                send = false;
                                                
                                            }
@@ -177,8 +223,6 @@
                                       
                                   }
                               }];
-    
- 
 }
 
 - (IBAction)back:(id)sender {

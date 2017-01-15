@@ -13,6 +13,11 @@
 @interface Chat : UIViewController <UITableViewDelegate, UITableViewDataSource> {
     FIRAuthCredential *credential;
     NSMutableArray *chatHistory;
+    NSMutableArray *users;
+    NSString *firebaseid;
+    int startIndex;
+
+
     int messagesCount;
     Boolean send;
     NSString *message;
