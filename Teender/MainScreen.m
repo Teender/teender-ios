@@ -27,12 +27,15 @@
     if ([FBSDKAccessToken currentAccessToken]) {
         // User is logged in, do work such as go to next view controller.
         NSLog(@"logged in");
-        NSString *accessToken = [FBSDKAccessToken currentAccessToken];
-        NSLog(@"%@", accessToken);
+        facebookid = [FBSDKAccessToken currentAccessToken].userID;
+        NSLog([FBSDKAccessToken currentAccessToken].tokenString);
         
         credential = [FIRFacebookAuthProvider
                                          credentialWithAccessToken:[FBSDKAccessToken currentAccessToken]
                                          .tokenString];
+        
+        FIRUser *currentUser = [FIRAuth auth].currentUser;
+        firebaseid = currentUser.uid;
         
     }
     
@@ -70,8 +73,12 @@
                                  } withCancelBlock:^(NSError * _Nonnull error) {
                                      NSLog(@"%@", error.localizedDescription);
                                  }];
+                                 
+                                 [[[[_rootRef child:@"users2"] child:firebaseid] child:@"fbid" ] setValue: facebookid];
                              }
                          }];
+    
+    NSLog(@"%@", [FBSDKAccessToken currentAccessToken].tokenString);
     
     
 }

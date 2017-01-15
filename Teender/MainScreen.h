@@ -11,6 +11,8 @@
 
 @interface MainScreen : UIViewController <UITableViewDelegate, UITableViewDataSource> {
     FIRAuthCredential *credential;
+    NSString *facebookid;
+    NSString *firebaseid;
 }
     @property (weak, nonatomic) IBOutlet UILabel *label;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;

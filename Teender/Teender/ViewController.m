@@ -24,6 +24,7 @@
     [super viewDidLoad];
     
     FBSDKLoginButton *loginButton = [[FBSDKLoginButton alloc] init];
+    loginButton.readPermissions = @[@"email"];
     loginButton.center = self.view.center;
     [self.view addSubview:loginButton];
 
@@ -33,6 +34,13 @@
     
     
     loginButton.delegate = self;
+    
+    FBSDKLoginManager *loginManager = [[FBSDKLoginManager alloc] init];
+    [loginManager logInWithReadPermissions:@[@"email"]
+                        fromViewController:self
+                                   handler:^(FBSDKLoginManagerLoginResult *result, NSError *error) {
+                                       //TODO: process error or result
+                                   }];
    
     
 /*sign out
@@ -47,6 +55,8 @@
      
     
 }
+
+
 
 - (void)loginButton:(FBSDKLoginButton *)loginButton didCompleteWithResult:(FBSDKLoginManagerLoginResult *)result
               error:(NSError *)error {

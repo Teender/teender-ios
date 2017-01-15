@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface AddCrush : UIViewController
+@property (weak, nonatomic) IBOutlet UITextField *textField;
+- (IBAction)search:(id)sender;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
